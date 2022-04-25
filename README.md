@@ -7,7 +7,7 @@
  * by Yanwen Chen
  *
  * Initiated: 2022/04/19
- * Last updated: 2022/04/23
+ * Last updated: 2022/04/25
  *
  * CITATIONS: List all sources you used for this assignment.
  * http://learningprocessing.com/examples/chp10/example-10-04-timer
