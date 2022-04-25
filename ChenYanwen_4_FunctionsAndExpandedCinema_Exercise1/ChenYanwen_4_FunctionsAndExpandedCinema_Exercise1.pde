@@ -42,7 +42,7 @@ PImage img20;
 PImage img21;
 
 float imageX;
-float temp;
+int temp=1;
 float randomMotionX, randomMothionY;
 
 int savedTime;
@@ -106,60 +106,71 @@ void draw() {
 
 
 
-  //get a random number from 1 to 17
-  temp=int(random(1, 18));
-
-  //width of all of images are 320, margin is 30
-  //so x should be in range(30,450)
-  randomMotionX=random(30, 450);
-  //just make the image in half upper
-  randomMothionY=30;
-
   // Calculate how much time has passed
   passedTime = millis() - savedTime;
 
   // Has 1 second passed?
   if (passedTime > totalTime) {
 
-    //get the random image and put it on the left
-    //according to the random number we got
-    if (temp==1) {
-      image(img1, randomMotionX, randomMothionY );
-    } else if (temp==2) {
-      image(img2, randomMotionX, randomMothionY );
-    } else if (temp==3) {
-      image(img3, randomMotionX, randomMothionY );
-    } else if (temp==4) {
-      image(img4, randomMotionX, randomMothionY );
-    } else if (temp==5) {
-      image(img5, randomMotionX, randomMothionY );
-    } else if (temp==6) {
-      image(img6, randomMotionX, randomMothionY );
-    } else if (temp==7) {
-      image(img7, randomMotionX, randomMothionY );
-    } else if (temp==8) {
-      image(img8, randomMotionX, randomMothionY );
-    } else if (temp==9) {
-      image(img9, randomMotionX, randomMothionY );
-    } else if (temp==10) {
-      image(img10, randomMotionX, randomMothionY );
-    } else if (temp==11) {
-      image(img11, randomMotionX, randomMothionY );
-    } else if (temp==12) {
-      image(img12, randomMotionX, randomMothionY );
-    } else if (temp==13) {
-      image(img13, randomMotionX, randomMothionY );
-    } else if (temp==14) {
-      image(img14, randomMotionX, randomMothionY );
-    } else if (temp==15) {
-      image(img15, randomMotionX, randomMothionY );
-    } else if (temp==16) {
-      image(img16, randomMotionX, randomMothionY );
-    } else {
-      image(img17, randomMotionX, randomMothionY );
-    }
+    randomMotionX=random(30, 450);
+    randomMothionY=30;
 
+    //get a random number from 1 to 17
+    temp=int(random(1, 18));
     // Save the current time to restart the timer!
     savedTime = millis();
+  }
+  switch(temp) {
+  case 1:
+    image(img1, randomMotionX, randomMothionY );
+    break;
+  case 2:
+    image(img2, randomMotionX, randomMothionY );
+    break;
+  case 3:
+    image(img3, randomMotionX, randomMothionY );
+    break;
+  case 4:
+    image(img4, randomMotionX, randomMothionY );
+    break;
+  case 5:
+    image(img5, randomMotionX, randomMothionY );
+    break;
+  case 6:
+    image(img6, randomMotionX, randomMothionY );
+    break;
+  case 7:
+    image(img7, randomMotionX, randomMothionY );
+    break;
+  case 8:
+    image(img8, randomMotionX, randomMothionY );
+    break;
+  case 9:
+    image(img9, randomMotionX, randomMothionY );
+    break;
+  case 10:
+    image(img10, randomMotionX, randomMothionY );
+    break;
+  case 11:
+    image(img11, randomMotionX, randomMothionY );
+    break;
+  case 12:
+    image(img12, randomMotionX, randomMothionY );
+    break;
+  case 13:
+    image(img13, randomMotionX, randomMothionY );
+    break;
+  case 14:
+    image(img14, randomMotionX, randomMothionY );
+    break;
+  case 15:
+    image(img15, randomMotionX, randomMothionY );
+    break;
+  case 16:
+    image(img16, randomMotionX, randomMothionY );
+    break;
+  case 17:
+    image(img17, randomMotionX, randomMothionY );
+    break;
   }
 }
